@@ -1,6 +1,6 @@
 {
-  "name": "Elevor360D MSC Seascape Cruise Companion",
-  "short_name": "MSC Seascape Guide",
+  "name": "Elevor360D MSC Seashore Cruise Companion",
+  "short_name": "MSC Seashore Guide",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

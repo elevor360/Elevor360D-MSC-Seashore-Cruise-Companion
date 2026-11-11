@@ -1,7 +1,7 @@
 'use strict';
-const CACHE_NAME = 'elevor360d-msc-seascape-static-v1';
-const PREFIX = 'elevor360d-msc-seascape-static-';
-const OFFLINE_FILES = ['./','./index.html','./style.css?v=mscv1','./app.js?v=mscv1','./manifest.webmanifest','./icon.svg','./venues.json','./information.json?v=mscv1','./advert-settings.json','./share-qr.png','./advertising.js?v=mscv1','./ad-config.json','./advertising/adverts.json','./advertising/images/elevor360d-promo.jpg'];
+const CACHE_NAME = 'elevor360d-msc-seashore-static-v1';
+const PREFIX = 'elevor360d-msc-seashore-static-';
+const OFFLINE_FILES = ['./','./index.html','./style.css?v=mshv1','./app.js?v=mshv1','./manifest.webmanifest','./icon.svg','./venues.json','./information.json?v=mshv1','./advert-settings.json','./share-qr.png','./advertising.js?v=mshv1','./ad-config.json','./advertising/adverts.json','./advertising/images/elevor360d-promo.jpg'];
 self.addEventListener('install',event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(OFFLINE_FILES)).then(() => self.skipWaiting())));
 self.addEventListener('activate',event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith(PREFIX) && key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim())));
 self.addEventListener('fetch',event => {
